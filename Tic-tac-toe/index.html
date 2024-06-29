@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600&display=swap" rel="stylesheet">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="game__title">Tic Tac Toe</h1>
+        <div id="game-board" class="game__board">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+        <h2 class="turn__title">Turn</h2>
+        <div class="turn__container">
+            <div class="turn__XO turn__bg">X</div>
+            <div class="turn__XO">O</div>
+        </div>
+        <div id="game-status" class="game-status">Player X's turn</div>
+        <button id="reset-button" class="reset__button">Reset Game</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+:root {
+  --clr-dark: rgb(7, 10, 19);
+  --clr-light: rgb(241, 245, 249);
+  --clr-slate400: rgb(148, 163, 184);
+  --clr-slate600: rgb(71, 85, 105);
+  --clr-slate800: rgb(30, 41, 59);
+  --clr-red: rgb(225, 29, 72);
+  --clr-indigo: rgb(79, 70, 229);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: calc(1em + 0.5rem);
+}
+
+body {
+  font-family: "Clash Display", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: var(--clr-light);
+  background-color: var(--clr-dark);
+}
+
+button {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+  font-family: inherit;
+}
+
+.container {
+  text-align: center;
+  padding: 1rem;
+}
+
+.game__title {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: var(--clr-light);
+}
+
+.game__board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 10px;
+  margin: 20px 0;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  color: var(--clr-slate800);
+  background-color: var(--clr-light);
+  border: 1px solid var(--clr-slate400);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.cell:hover {
+  background-color: var(--clr-slate400);
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.turn__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.turn__title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.turn__XO {
+  padding: 0.5rem 2rem;
+  font-size: 2rem;
+  border: 1px solid var(--clr-slate400);
+  border-radius: 5px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.turn__XO:nth-child(even) {
+  border-left: none;
+}
+
+.turn__bg {
+  background-color: var(--clr-indigo);
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.5),
+    0 6px 6px rgba(79, 70, 229, 0.5), 0 0 100px -10px var(--clr-indigo);
+}
+
+.reset__button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  background-color: var(--clr-red);
+  color: var(--clr-light);
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  box-shadow: 0 10px 20px rgba(225, 29, 72, 0.5),
+    0 6px 6px rgba(225, 29, 72, 0.5), 0 0 100px -10px var(--clr-red);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.reset__button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(225, 29, 72, 0.25),
+    0 10px 10px rgba(225, 29, 72, 0.22), 0 0 120px -10px var(--clr-red);
+}
+
+.game-status {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: var(--clr-light);
+}
